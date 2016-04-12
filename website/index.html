@@ -1,0 +1,461 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nyleve Alejandrino | Sydney Web &amp; Graphic Designer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:700,400|Oswald' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+
+    <script>
+    $(function(){
+        $("#typed").typed({
+            strings: [" Pixel perfect attention to detail", "Bringing goal driven projects to life", "Hello there, I'm Nyleve...", "But you can call me Ny." ],
+            typeSpeed: 60,
+            backDelay: 2000,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+    });
+    function newTyped(){ /* A new typed object */ }
+    function foo(){ console.log("Callback"); }
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        modals.init();
+      });
+
+      var modals = {
+        autoplay: true,
+        init: function() {
+          $(".videoPlayer").dialog({
+            width: 1160,
+            height: 720,
+            autoOpen: false,
+            resizable: true,
+            show: {
+              effect: 'fade',
+              duration: 300
+            },
+            hide: {
+              effect: "fade",
+              duration: 300
+            }
+          });
+
+          $(".videoPlayer").each(function() {
+            $('.ui-widget-header').remove();
+          });
+
+          $(".loadVideo").click(function() {
+            var videoPlayerId = $(this).attr('id') + 'player';
+            $("#" + videoPlayerId).dialog("open");
+            if (modals.autoplay == true) {
+              $('#' + videoPlayerId)[0].play();
+            }
+            $('#overlay').fadeIn();
+          });
+
+          $(document).mouseup(function(e) {
+            if ($('.videoPlayer').is(':visible')) {
+              var container = $(".videoPlayer");
+
+              if (!container.is(e.target) && container.has(e.target).length === 0) {
+                container.dialog("close");
+                $('#overlay').fadeOut(300);
+
+                $('video').each(function() {
+                  $(this)[0].pause();
+                });
+              }
+            }
+          });
+        }
+      }
+    </script>
+
+    <style>
+      /* code for animated blinking cursor */
+      .typed-cursor{
+          opacity: 1;
+          font-weight: 100;
+          -webkit-animation: blink 0.7s infinite;
+          -moz-animation: blink 0.7s infinite;
+          -ms-animation: blink 0.7s infinite;
+          -o-animation: blink 0.7s infinite;
+          animation: blink 0.7s infinite;
+      }
+      @-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-webkit-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-moz-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-ms-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-o-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+    </style>
+
+  </head>
+  <body>
+
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="hero-unit" id="top">
+      <div class="main-container">
+<!-- <img src="img/square-logo.svg" alt="" class="square-logo"> -->
+
+
+
+
+      <div class="logo-section">
+
+        <div class="small-logo">
+          <img id="logo-01" src="img/logo-01.svg" alt="">
+          <img id="logo-02" class="mobile" src="img/logo-02.svg" alt="">
+        </div>
+
+        <div class="name-description">
+          <img id="logo-03" src="img/logo-03.svg" alt="">
+          <img id="logo-04" src="img/logo-04.svg" alt="">
+        </div>
+
+        <div class="pen">
+          <img id="logo-05" class="mobile" src="img/logo-05.svg" alt="">
+        </div>
+
+      </div>
+      <!-- <h2><span id="typed"></span></h2> -->
+
+
+      </div>
+    </div>
+    <div class="strip">
+      <span class="colour red"></span>
+      <span class="colour green"></span>
+      <span class="colour blue"></span>
+      <span class="colour teal"></span>
+      <span class="colour yellow"></span>
+      <span class="colour orange"></span>
+      <span class="colour purple"></span>
+      <span class="colour lime"></span>
+    </div>
+        <div class="portfolio group" id="works">
+
+      <div class="main-container">
+
+        <h1>Portfolio</h1>
+
+
+        <div class="gallery group">
+          <div id="overlay" class="overlay"></div>
+            <div class="item">
+              <img src="img/screenshot/phone-app.jpg" alt=""/>
+              <video loop id="video1player" class="videoPlayer">
+                <source src="img/video/music-app.mp4" type="video/mp4">
+              Video is not supported.
+              </video>
+              <div class="thumbnail-overlay loadVideo" id="video1" >
+                <h1>Music app</h1>
+                <p>Music application</p>
+              </div>
+            </div>
+<!--
+            <div class="item">
+              <img src="img/screenshot/CPR.jpg" alt=""/>
+              <video loop id="video2player" class="videoPlayer">
+                <source src="img/video/ACCV.mp4" type="video/mp4">
+                Video is not supported.
+              </video>
+              <div class="thumbnail-overlay loadVideo" id="video2">
+                <h1>Crescent Prestige Realty</h1>
+                <p>Web/Graphic Design and Motion Graphics</p>
+              </div>
+            </div>
+-->
+        <div class="item">
+              <img src="img/screenshot/CPR.jpg" alt=""/>
+              <a href="case-study/crescent-prestige"><div class="thumbnail-overlay">
+                <h1>Crescent Prestige Realty</h1>
+                <p>Web/Graphic Design and Motion Graphics</p>
+              </div></a>
+            </div>
+
+             <div class="item">
+              <img src="img/screenshot/better-vitamin.jpg" alt=""/>
+              <a href="case-study/palatapal"><div class="thumbnail-overlay">
+                <h1>Palatapal</h1>
+                <p>Web Design and Development</p>
+              </div></a>
+            </div>
+
+       <!--      <div class="item">
+              <img src="img/screenshot/afmb.jpg" alt=""/>
+              <video loop id="video4player" class="videoPlayer">
+                <source src="img/video/afmb.mp4" type="video/mp4">
+                Video is not supported.
+              </video>
+              <div class="thumbnail-overlay loadVideo" id="video4">
+                <h1>AFMB</h1>
+                <p>Web Design and Development</p>
+              </div>
+            </div> -->
+
+             <div class="item">
+              <img src="img/screenshot/afmb.jpg" alt=""/>
+              <a href="case-study/afmb"><div class="thumbnail-overlay">
+                <h1>AFMB</h1>
+                <p>Web Design and Development</p>
+              </div></a>
+            </div>
+
+            <div class="item">
+              <img src="img/screenshot/bloomy.jpg" alt=""/>
+            <video loop id="video5player" class="videoPlayer">
+              <source src="img/video/bloom.mp4" type="video/mp4">
+              Video is not supported.
+            </video>
+              <div class="thumbnail-overlay loadVideo" id="video5" >
+                <h1>Bloom</h1>
+                <p>Illustrator and Photoshop</p>
+              </div>
+            </div>
+
+            <div class="item"><div id="overlay" class="overlay"></div>
+              <img src="img/screenshot/anappleaday.jpg" alt=""/>
+              <video loop id="video6player" class="videoPlayer">
+                <source src="img/video/anappleadaymov.mp4" type="video/mp4">
+                Video is not supported.
+              </video>
+              <div class="thumbnail-overlay loadVideo" id="video6">
+                <h1>An Apple A Day</h1>
+                <p>Illustrator and Photoshop</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="about group">
+      <div class="main-container">
+        <h1>About</h1>
+
+        <p class="blurb">Hello there, my name is Nyleve Alejandrino. I am a multi-disciplinary designer with a focus on Web and Graphic who takes pleasure in planning, developing and creating goal driven projects and watching them come to life and deliver results. </p>
+
+<div class="skill-wrapper">
+        <div class="skills">
+          <div class="skills-container">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 338.168 338.168" enable-background="new 0 0 338.168 338.168" xml:space="preserve" class="icons">
+              <path d="M200.772,105.601l-62.829,15.61c-0.899,0.224-1.566,0.979-1.677,1.898c-0.108,0.917,0.36,1.809,1.178,2.241 l57.339,30.062c0.837,0.438,1.861,0.302,2.556-0.343c0.018-0.019,0.039-0.04,0.058-0.058c0.645-0.644,0.833-1.622,0.467-2.464 l-10.124-23.249l15.346-20.185c0.573-0.753,0.608-1.785,0.088-2.575C202.654,105.748,201.691,105.372,200.772,105.601z"/>
+                    <path d="M321.735,111.634l-1.35,1.35c-40.667-38.715-100.493-50.739-153.092-30.901l35.634-35.634l1.104,1.104
+                      c0.871,0.871,2.282,0.871,3.153,0l15.45-15.45c0.871-0.872,0.87-2.282,0-3.153l-15.45-15.45c-0.871-0.871-2.282-0.872-3.153,0
+                      l-15.45,15.45c-0.87,0.871-0.87,2.282,0,3.153l1.104,1.104l-68.938,68.938l-1.419-1.419c-0.696-0.696-1.826-0.696-2.522,0
+                      l-16.081,16.081c-0.696,0.696-0.696,1.826,0,2.522l1.419,1.419l-68.938,68.938l-1.104-1.104c-0.871-0.87-2.282-0.87-3.153,0
+                      l-15.45,15.45c-0.871,0.872-0.871,2.283,0,3.154l15.45,15.45c0.871,0.871,2.282,0.871,3.153,0l15.45-15.45
+                      c0.871-0.871,0.871-2.283,0-3.154l-1.104-1.103l35.633-35.634c-19.836,52.599-7.813,112.426,30.901,153.091l-1.349,1.351
+                      c-0.871,0.87-0.871,2.281,0,3.152l9.564,9.563c0.871,0.872,2.282,0.871,3.153,0l9.564-9.563c0.871-0.871,0.872-2.281,0-3.152
+                      l-9.564-9.564c-0.871-0.871-2.282-0.871-3.153,0l-1.277,1.276c-21.052-22.191-34.162-51.2-36.924-81.734
+                      c-2.739-30.261,4.714-60.905,20.986-86.298l11.412-11.418l1.411,1.411c0.696,0.696,1.826,0.696,2.522,0l16.081-16.081
+                      c0.696-0.696,0.696-1.826,0-2.522l-1.416-1.416l11.521-11.47c25.373-16.228,55.978-23.659,86.2-20.924
+                      c30.535,2.763,59.542,15.871,81.735,36.924l-1.276,1.277c-0.871,0.871-0.871,2.282,0,3.153l9.563,9.564
+                      c0.871,0.871,2.282,0.871,3.153,0l9.563-9.564c0.871-0.871,0.871-2.282,0-3.153l-9.563-9.564
+                      C324.019,110.765,322.606,110.764,321.735,111.634z M126.663,323.313l-3.889,3.888l-3.888-3.888l3.888-3.889L126.663,323.313z
+                       M327.2,122.775l-3.889,3.889l-3.889-3.889l3.889-3.888L327.2,122.775z"/>
+              </svg>
+
+
+            <p class="skill-title">Graphic Design</p>
+            <p class="skill-description">While I enjoy making things look more aesthetically pleasing as the next guy, I focus on ‘goal oriented’ design. These past years I’ve been honing this mindset with every passing project spanning from Branding, Flyers to App Mockups.</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="skills">
+          <div class="skills-container">
+            <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" class="icons" >
+                <path  d="M0,3v26h32V3H0z M30,27H2V7h28V27z"/>
+                <rect x="18" y="11"  width="10" height="2"/>
+                <rect x="18" y="15"  width="10" height="2"/>
+                <rect x="18" y="19"  width="6" height="2"/>
+                <rect x="4" y="11"  width="10" height="10"/>
+
+            </svg>
+
+            <p class="skill-title">Web Design</p>
+            <p class="skill-description">With the rise of ‘Responsive design’ and a focus on ‘User interface’ and ‘User Experience’, Web Design has become a more demanding discipline. I believe in developing simple yet elegant web experiences that maximize a ‘call to action’.</p>
+          </div>
+        </div>
+
+        <div class="skills">
+          <div class="skills-container">
+            <svg version="1.1" id="Capa_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="60px" height="60px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="icons">
+                <path d="M480,0H32C14.313,0,0,14.328,0,32v448c0,17.688,14.313,32,32,32h448c17.688,0,32-14.312,32-32V32
+                  C512,14.328,497.688,0,480,0z M432,448H160v16c0,8.844-7.156,16-16,16s-16-7.156-16-16v-16H80c-8.844,0-16-7.156-16-16
+                  s7.156-16,16-16h48v-16c0-8.844,7.156-16,16-16s16,7.156,16,16v16h272c8.844,0,16,7.156,16,16S440.844,448,432,448z M480,352H32V32
+                  h448V352z M356.219,176.125c15.281,8.734,15.281,23.016,0,31.75l-168.438,96.25C172.5,312.844,160,305.594,160,288V96
+                  c0-17.594,12.5-24.859,27.781-16.125L356.219,176.125z"/>
+              </svg>
+
+            <p class="skill-title">Motion Graphics</p>
+            <p class="skill-description">From UI/UX, Banners, Kinetic Typography to App mockups I take pixel perfect care in tailoring motion graphics to engage an audience to create the perfect pitch that gets your message across.</p>
+          </div>
+        </div>
+</div>
+      </div>
+    </div>
+
+
+
+
+    <div class="contact group">
+      <div class="main-container">
+
+
+      <h1>Contact</h1>
+
+        <div class="details">
+
+          <img src="img/profile.jpg" class="profile" alt="Profile Pic">
+
+          <div class="detail-group">
+            <a href="mailto:contact@nylevealejandrino.com"><p>e: contact@nylevealejandrino.com</p></a>
+            <a href="tel:+61433877229"><p>ph: 0433 877 229</p></a>
+          </div>
+
+
+          <a href="https://au.linkedin.com/in/nylevealejandrino" target="_blank"><i class="fa fa-linkedin-square fa-lg linked"></i></a>
+          <a href="https://www.facebook.com/tontonlives" target="_blank"><i class="fa fa-facebook-square fa-lg fb"></i></a>
+        </div>
+
+
+        <div class="contact-form" id="contact-form">
+
+          <form method="POST" action="//formspree.io/contact@nylevealejandrino.com">
+
+            <div class="contact-group-info">
+              <input type="text" name="name" placeholder="Name">
+              <input type="email" name="_replyto" placeholder="Email">
+              <input type="text" name="subject" placeholder="Subject">
+              <input type="text" name="phone" placeholder="Phone no.">
+            </div>
+
+            <div class="message"></div>
+            <textarea name="message" placeholder="Message"></textarea>
+            <input type="submit" value="Send">
+
+          </form>
+
+      </div>
+
+
+    </div>
+
+    </div>
+  <div class="strip">
+      <span class="colour red"></span>
+      <span class="colour green"></span>
+      <span class="colour blue"></span>
+      <span class="colour teal"></span>
+      <span class="colour yellow"></span>
+      <span class="colour orange"></span>
+      <span class="colour purple"></span>
+      <span class="colour lime"></span>
+    </div>
+    <footer>
+
+      <div class="main-container">
+        <div class="copy">
+          <p>2015 &copy; Nyleve Alejandrino</p>
+        </div>
+
+        <nav>
+
+          <a href="#top" class="top">Back to the top <img src="img/arrow-up.png" class="arrow" alt=""></a> <!-- add top icon -->
+        </nav>
+      </div>
+
+    </footer>
+
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+        console.log("Hello, world");
+        var tl = new TimelineMax();
+
+        tl.from("#logo-01", .8, {alpha: 0, ease: Sine.easeOut})
+        .from("#logo-02", .3, {alpha: 0, ease: Sine.easeOut})
+
+        .from("#logo-03", .7, {alpha: 0, ease: Sine.easeOut})
+        .from("#logo-04", .7, {alpha: 0, ease: Sine.easeOut},"-=0.5")
+
+        .from("#logo-05", 1, {alpha: 0, x: -300, ease: Power3.easeOut},"-=0.4")
+
+
+
+        ;
+      }());
+    </script>
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+  </body>
+</html>
